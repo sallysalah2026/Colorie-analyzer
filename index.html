@@ -724,7 +724,7 @@ const foodDatabase = {
                     <tr data-id="${item.id}">
                         <td>${index + 1}</td>
                         <td class="food-name">${item.name}</td>
-                        <input type="number" class="quantity-input" value="${n.quantity}" step="10" oninput="updateQuantity(${item.id}, this.value)">
+                        <td><input type="number" class="quantity-input" value="${n.quantity}" step="10" min="0" onchange="updateQuantity(${item.id}, this.value)"></td>
                         <td class="nutrient-cell">${n.calories}</td>
                         <td>${n.protein}</td>
                         <td>${n.fat}</td>
